@@ -1,4 +1,4 @@
-EscalationPro:
+escalation-policy:
   levels:
     - level: 1
       criteria:
