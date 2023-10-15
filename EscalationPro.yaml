@@ -1,0 +1,19 @@
+escalationPolicy:
+  levels:
+    - level: 1
+      criteria:
+        - unresolvedTime: 24h
+        - severity: High
+      notification:
+        - recipients:
+            - taskOwner
+            - taskOwnerManager
+          message: "Task is unresolved and needs to be escalated to your manager."
+    - level: 2
+      criteria:
+        - unresolvedTime: 48h
+        - severity: Critical
+      notification:
+        - recipients:
+            - seniorManager
+          message: "Task is unresolved and needs to be escalated to a senior manager."
